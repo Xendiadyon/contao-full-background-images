@@ -9,6 +9,11 @@ This extension provides multiple variants of having full background images for a
 * Subpages can inherit settings from a parent page
 * Mobile ready (phone & tablet)
 
+Hotfix by Xendiadyon
+-------------
+There is an (ugly) hotfix which enables this extension to work with High-Resolution Desktop Devices (https://github.com/1up-lab/contao-full-background-images/issues/31). As the hotfix is ugly, I chose not to make a pull request but to release a personal fork instead.
+For an official and maintained version please refer to https://github.com/1up-lab/contao-full-background-images/
+
 Documentation
 -------------
 
