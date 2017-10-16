@@ -26,7 +26,7 @@
     },
     "replace": {
         "contao-legacy/full-background-images": "*",
-        "oneup/full-background-images": "self.version",
+        "oneup/full-background-images": "self.version"
     },
     "conflict": {
         "contao/core": "3.4.0"
