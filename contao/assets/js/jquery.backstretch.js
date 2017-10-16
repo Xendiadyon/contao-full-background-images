@@ -231,11 +231,11 @@
         resize: function () {
             try {
                 var bgCSS = {left: 0, top: 0}
-                    , landscape = (Math.ceil(window.innerWidth / window.innerHeight) > Math.ceil(screen.width / screen.height))
-                    , rootWidth = this.isBody ? (isMobile ? (landscape ? screen.height : screen.width) : this.$root.width()) : this.$root.innerWidth()
-                    , bgWidth = rootWidth
-                    , rootHeight = this.isBody ? (isMobile ? (landscape ? screen.width : screen.height) : (window.innerHeight ? window.innerHeight : this.$root.height() )) : this.$root.innerHeight()
-                    , bgHeight = bgWidth / this.$img.data('ratio')
+                    , landscape = (Math.ceil(window.innerWidth / window.innerHeight) > 1) /* 170131 CM fix: landscape = (Math.ceil(window.innerWidth / window.innerHeight) > Math.ceil(screen.width / screen.height)) */
+                    , rootWidth = this.isBody ? (isMobile ? (landscape ? window.innerWidth : window.innerHeight) : this.$root.width()) : this.$root.innerWidth() /* 170131 CM fix: */
+                    , bgWidth = rootWidth                   /* nimm einfach immer die window.innerHeight! Außer wenn die screen.Height nur geringfügig größer ist als die window.innerHeight, dann verwende diese */
+                    , rootHeight = this.isBody ? (isMobile ? (landscape ? ((screen.height < window.innerHeight+100) ? screen.height : window.innerHeight): ((screen.height < window.innerHeight+100) ? screen.height : window.innerHeight)) : (window.innerHeight ? window.innerHeight : this.$root.height() )) : this.$root.innerHeight()
+                    , bgHeight = bgWidth / this.$img.data('ratio')          /* quer */                                                                      /* hoch */
                     , bgOffset;
 
                 // mobile device and no viewport set
