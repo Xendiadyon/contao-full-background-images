@@ -1,5 +1,5 @@
 {
-    "name":"oneup/contao-full-background-images",
+    "name":"xendiadyon/contao-full-background-images",
     "description":"Use full background images in Contao Open Source CMS. This extension also provides a full background image slider/fader.",
     "keywords":["contao", "full", "background", "slider", "images"],
     "type":"contao-module",
@@ -21,11 +21,12 @@
     },
     "require":{
         "php":">=5.4",
-        "contao/core":">=3.2,<3.6-dev",
+        "contao/core":">=3.2,>=4.4",
         "contao-community-alliance/composer-installer": "*"
     },
     "replace": {
-        "contao-legacy/full-background-images": "self.version"
+        "contao-legacy/full-background-images": "self.version",
+        "oneup/full-background-images": "self.version",
     },
     "conflict": {
         "contao/core": "3.4.0"
