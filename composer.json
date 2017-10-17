@@ -11,6 +11,12 @@
             "email":"dg@1up.io",
             "homepage":"http://1up.io",
             "role":"Developer"
+        },
+            {
+            "name":"Christian Methfessel",
+            "email":dev@xendiadyon.de",
+            "homepage":"http://www.christian-methfessel.de",
+            "role":"Developer"
         }
     ],
     "support":{
@@ -21,15 +27,16 @@
     },
     "require":{
         "php":">=5.4",
-        "contao/core":">=3.2,>=4.4",
+        "contao/core-bundle":"^4.3"
         "contao-community-alliance/composer-installer": "*"
     },
     "replace": {
-        "contao-legacy/full-background-images": "*",
+        "contao-legacy/full-background-images": "self.version",
         "oneup/full-background-images": "self.version"
     },
     "conflict": {
-        "contao/core": "3.4.0"
+        "contao/core": "*",
+        "contao/manager-plugin": "<2.0 || >=3.0"
     },
     "autoload": {
         "psr-4": {
